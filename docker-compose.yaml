@@ -1,0 +1,23 @@
+services:
+ csvserver:
+  image: infracloudio/csvserver
+  ports: 
+   - "9393:9300"
+  environment:
+   CSVSERVER_BORDER: Orange
+  volumes:
+   - type: bind
+     source: ./root/manpreet-repos/csvserver/solution/inputFile
+     target: /csvserver/inputdata
+
+ prometheus:
+   image: prom/prometheus:v2.22.0
+   ports:
+    - "9092:9090"
+   volumes:
+    - type: bind
+      source: /etc/prometheus.yml
+      target:  /etc/prometheus/prometheus.yml
+   tty: true
+   stdin_open: true
+
