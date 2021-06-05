@@ -15,3 +15,7 @@ docker exec -it 4ac0 /bin/bash
 export CSVSERVER_BORDER=Orange
 curl http://localhost:9393
 env
+
+
+
+Note: Console is running on 9090 port in my host, so I have used different port in compose file.
