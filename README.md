@@ -1,4 +1,4 @@
-#Answers By Manpreet#
+
 docker run -d -v /root/manpreet-repos/csvserver/solution/inputFile:/csvserver/inputdata infracloudio/csvserver:latest
 
 docker ps
